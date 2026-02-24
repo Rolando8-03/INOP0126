@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mi página sencilla</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="nav">
+				<span class="logo">INOP0126</span>
+				<div class="nav-links">
+					<a href="#inicio">Inicio</a>
+					<a href="#servicios">Servicios</a>
+					<a href="#contacto">Contacto</a>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section id="inicio" class="hero">
+				<div class="hero-content">
+					<h1>Una página web sencilla y moderna</h1>
+					<p>
+						Diseñada para ser clara, rápida y agradable. Ideal para presentar tu
+						proyecto o negocio.
+					</p>
+					<button id="ctaBtn" class="btn">Empezar</button>
+					<p id="ctaMessage" class="cta-message" aria-live="polite"></p>
+				</div>
+				<div class="hero-card">
+					<h2>Resumen</h2>
+					<ul>
+						<li>Diseño limpio</li>
+						<li>Secciones claras</li>
+						<li>Botón interactivo</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="servicios" class="section">
+				<h2>Servicios</h2>
+				<div class="cards">
+					<article class="card">
+						<h3>Diseño</h3>
+						<p>Interfaces sencillas y fáciles de usar.</p>
+					</article>
+					<article class="card">
+						<h3>Desarrollo</h3>
+						<p>Web rápida y compatible con móviles.</p>
+					</article>
+					<article class="card">
+						<h3>Soporte</h3>
+						<p>Actualizaciones y mejoras continuas.</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="contacto" class="section contact">
+				<h2>Contacto</h2>
+				<form class="contact-form">
+					<label>
+						Nombre
+						<input type="text" placeholder="Tu nombre" required />
+					</label>
+					<label>
+						Email
+						<input type="email" placeholder="tucorreo@email.com" required />
+					</label>
+					<label>
+						Mensaje
+						<textarea rows="4" placeholder="Escribe tu mensaje" required></textarea>
+					</label>
+					<button type="submit" class="btn">Enviar</button>
+				</form>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<small>© 2026 INOP0126. Todos los derechos reservados.</small>
+		</footer>
+
+		<script src="assets.js"></script>
+	</body>
+</html>
