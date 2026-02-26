@@ -360,6 +360,18 @@ main {
 .section-heading {
 	max-width: 760px;
 	margin-bottom: 28px;
+	position: relative;
+}
+
+.section-heading::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -12px;
+	width: 120px;
+	height: 2px;
+	background: linear-gradient(90deg, var(--primary), transparent);
+	opacity: 0.7;
 }
 
 .section-heading h2 {
@@ -371,6 +383,11 @@ main {
 
 .section-heading p {
 	color: var(--muted);
+}
+
+.muted {
+	color: var(--muted);
+	font-size: 0.95rem;
 }
 
 .cards {
@@ -394,6 +411,27 @@ main {
 	box-shadow: var(--shadow);
 	transition: transform 0.2s ease, box-shadow 0.2s ease;
 	position: relative;
+}
+
+.card,
+.mini-card,
+.pillar,
+.icon-card,
+.diagram-node,
+.timeline-item,
+.text-grid > div {
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover,
+.mini-card:hover,
+.pillar:hover,
+.icon-card:hover,
+.diagram-node:hover,
+.text-grid > div:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 24px 36px rgba(0, 0, 0, 0.35);
+	border-color: rgba(176, 18, 27, 0.4);
 }
 
 .card::after {
@@ -448,6 +486,14 @@ main {
 .timeline-item {
 	position: relative;
 	padding-top: 10px;
+	background: linear-gradient(120deg, rgba(176, 18, 27, 0.08), transparent 60%);
+	border-radius: 12px;
+	padding: 12px 14px 12px 18px;
+	border: 1px solid transparent;
+}
+
+.timeline-item:hover {
+	border-color: rgba(176, 18, 27, 0.35);
 }
 
 .timeline-dot {
@@ -555,6 +601,11 @@ main {
 	object-fit: cover;
 	display: block;
 	filter: saturate(1.05) contrast(1.08);
+	transition: transform 0.4s ease;
+}
+
+.section-media:hover img {
+	transform: scale(1.02);
 }
 
 .section-media figcaption {
@@ -601,6 +652,12 @@ main {
 	font-family: "Libre Baskerville", serif;
 	box-shadow: var(--shadow);
 	position: relative;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.quote:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 26px 40px rgba(0, 0, 0, 0.35);
 }
 
 .quote::before {
@@ -656,6 +713,11 @@ main {
 	height: 100%;
 	min-height: 260px;
 	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.spotlight-media:hover img {
+	transform: scale(1.03);
 }
 
 .spotlight-grid {
@@ -715,6 +777,12 @@ main {
 	border: 1px solid rgba(176, 18, 27, 0.24);
 	box-shadow: var(--shadow);
 	font-family: "Libre Baskerville", serif;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.callout:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 24px 36px rgba(0, 0, 0, 0.35);
 }
 
 .masonry {
@@ -776,6 +844,25 @@ main {
 .reveal.is-visible {
 	opacity: 1;
 	transform: translateY(0);
+}
+
+.reveal.is-visible .card,
+.reveal.is-visible .mini-card,
+.reveal.is-visible .pillar,
+.reveal.is-visible .icon-card,
+.reveal.is-visible .diagram-node {
+	animation: revealLift 0.6s ease both;
+}
+
+@keyframes revealLift {
+	from {
+		transform: translateY(8px);
+		opacity: 0.85;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
 
 @keyframes scrollPulse {
